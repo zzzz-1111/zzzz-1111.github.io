@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Jupyter Lab和Pytorch的安装和使用 | zzzz&#39;s blog</title>
+<meta name="description" content="有志者，事竟成">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://zzzz-1111.github.io/favicon.ico?v=1764650264945">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://zzzz-1111.github.io/styles/main.css">
+
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://zzzz-1111.github.io">zzzz&#39;s blog</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>Jupyter Lab和Pytorch的安装和使用</h1>
+            <p class="article-meta">
+              2025-12-02
+              
+                <a href="https://zzzz-1111.github.io/tag/uJ89BdBJly/" class="badge secondary">
+                  AI
+                </a>
+              
+            </p>
+            
+            <div class="post-content" v-pre>
+              <h2 id="jupyter-lab安装">Jupyter Lab安装</h2>
+<p>使用pip安装</p>
+<pre><code class="language-bash">pip install jupyterlab
+</code></pre>
+<p>然后将python包的script文件夹添加到系统的PATH环境变量</p>
+<p>包的位置可以使用命令<code>pip show jupyterlab</code>来查看。<strong>注意，是要将script文件夹而不是site-packages文件夹</strong>，exe文件才可以直接执行</p>
+<p>然后在cmd敲入<code>jupyter lab</code>即可打开了。</p>
+<h3 id="修改默认工作目录">修改默认工作目录</h3>
+<p>运行下面这行命令，将文件的目录记住，然后再打开对应的文件</p>
+<pre><code class="language-bash">jupyter notebook --generate-config
+</code></pre>
+<p>找到文件中的<code># c.ServerApp.notebook_dir = ''</code>，去掉注释再将目录填进去就好了<br>
+改成类似<code>c.ServerApp.notebook_dir = 'D:\\code\\jupyterlab'</code><br>
+<img src="https://zzzz-1111.github.io/post-images/1764640520901.png" alt="" loading="lazy"></p>
+<h2 id="pytorch-安装">Pytorch 安装</h2>
+<p>再官网链接上下载，然后安装。<br>
+<a href="https://www.anaconda.com/download">anaconda下载链接</a></p>
+<p>然后就可以在开始菜单启动Anaconda Prompt了</p>
+<h3 id="配置虚拟环境">配置虚拟环境</h3>
+<pre><code class="language-bash">conda create -n env_name python==version 
+# 注：将env_name 替换成你的环境的名称，version替换成对应的版本号，eg：3.8
+
+conda activate env_name
+# 注：env_name 替换成对应的环境的名称
+conda deactivate
+
+</code></pre>
+<p><strong>注意，版本最好不要太高，太高会导致相关的库不适配</strong></p>
+<p>其他更详细的配置可以看这个教程：<a href="https://datawhalechina.github.io/thorough-pytorch/%E7%AC%AC%E4%B8%80%E7%AB%A0/1.2%20PyTorch%E7%9A%84%E5%AE%89%E8%A3%85.html#">深入浅出PyTorch-PyTorch的安装</a></p>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                Next Blog
+              </div>
+              <a href="https://zzzz-1111.github.io/post/diffision-xue-xi/">
+                <h3 class="post-title">
+                  diffusion学习
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://zzzz-1111.github.io/images/avatar.png?v=1764650264945" class="no-responsive avatar">
+    <div class="text-muted">有志者，事竟成</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      The Latest Blog
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://zzzz-1111.github.io/post/ti-jie-p4137rmq-problem-mex/">题解 P4137【Rmq Problem / mex】</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zzzz-1111.github.io/post/a/">Jupyter Lab和Pytorch的安装和使用</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zzzz-1111.github.io/post/diffision-xue-xi/">diffusion学习</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zzzz-1111.github.io/post/ba-da-mo-xing-jie-ru-dai-ma/">把大模型接入代码</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zzzz-1111.github.io/post/shen-du-xue-xi-xue-xi-bi-ji-logistic-hui-gui-sun-shi-han-shu-yu-ti-du-xia-jiang-fa/">深度学习学习笔记：Logistic回归、损失函数与梯度下降法</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zzzz-1111.github.io/post/ru-he-jiang-win11-you-jian-cai-dan-gai-hui-win10-chuan-tong-ban-ben/">如何将win11右键菜单改回win10传统版本</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zzzz-1111.github.io/post/s/">blog第一天——如何使用Gridea搭建博客</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zzzz-1111.github.io/post/hello-gridea/">Hello Gridea</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      Label List
+    </div>
+    <div class="row">
+      
+        <a href="https://zzzz-1111.github.io/tag/t5Or_IrbPC/" class="badge ">
+          题解
+        </a>
+      
+        <a href="https://zzzz-1111.github.io/tag/uJ89BdBJly/" class="badge secondary">
+          AI
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Edited by Jinjia Zhao | <a class="rss" href="https://zzzz-1111.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>

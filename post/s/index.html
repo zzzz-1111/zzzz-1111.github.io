@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>blog第一天——如何使用Gridea搭建博客 | zzzz&#39;s blog</title>
+<meta name="description" content="有志者，事竟成">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://zzzz-1111.github.io/favicon.ico?v=1764650264945">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://zzzz-1111.github.io/styles/main.css">
+
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://zzzz-1111.github.io">zzzz&#39;s blog</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>blog第一天——如何使用Gridea搭建博客</h1>
+            <p class="article-meta">
+              2025-11-24
+              
+            </p>
+            
+            <div class="post-content" v-pre>
+              <h2 id="准备">准备</h2>
+<h3 id="github">Github</h3>
+<p>在github上开一个仓库，一般以&quot;用户名.github.io&quot;为仓库名称。例如我的是zzzz-1111.github.io。注意了，是网址里面的那个用户名，而不是个人界面可以编辑的&quot;Name&quot;</p>
+<p><img src="https://zzzz-1111.github.io/post-images/1763986696211.png" alt="" loading="lazy"><br>
+Configuration使用的visibility保持默认的Public</p>
+<figure data-type="image" tabindex="1"><img src="https://zzzz-1111.github.io/post-images/1763986634320.png" alt="" loading="lazy"></figure>
+<h3 id="gridea">Gridea</h3>
+<p>在<a href="https://open.gridea.dev/">Gridea官网</a>上下载对应版本的安装包并安装。</p>
+<figure data-type="image" tabindex="2"><img src="https://zzzz-1111.github.io/post-images/1763986801092.png" alt="" loading="lazy"></figure>
+<h2 id="github-token-获取">Github token 获取</h2>
+<p>点击右上角，进入setting，然后再下滑到最下面的Developer setting，点击进去，来到</p>
+<figure data-type="image" tabindex="3"><img src="https://zzzz-1111.github.io/post-images/1763986935214.png" alt="" loading="lazy"></figure>
+<p>点击Generate new token (classic)<br>
+<img src="https://zzzz-1111.github.io/post-images/1763986952998.png" alt="" loading="lazy"></p>
+<p>Note 随便写，在select scopes 里选上repo, workflow，然后把弹出来的token复制到其他地方保存（注意，只会显示一次，以后就看不到了）</p>
+<h2 id="gridea-配置">Gridea 配置</h2>
+<p>来到“远程”<br>
+<img src="https://zzzz-1111.github.io/post-images/1763987158889.png" alt="" loading="lazy"></p>
+<p>域名里填的是当时的仓库名，仓库名称也是填仓库名。<br>
+<strong>注意，只填仓库名，不要把前面的用户名也填进去了。就是不要填成zzzz-1111/zzzz-1111.github.oi形式</strong> <s>别问我怎么知道的</s></p>
+<p>分支的话按照github上显示的选，我的是默认的main。仓库用户名就是github的用户名，那个网址里的用户名。<br>
+令牌是之前<em>github</em>的token，HTTP代理根据你自己的代理来填写。地址一般是127.0.0.1，端口看代理软件。</p>
+<p>都填完之后，点左下角的检查远程连接，如果正常的话应该是这么显示的。<br>
+<img src="https://zzzz-1111.github.io/post-images/1763987418281.png" alt="" loading="lazy"></p>
+<p>然后点击同步，就大功告成了。过一会，在仓库界面就可以看到很多由Gridea上传的文件了。</p>
+<h2 id="github-page">Github Page</h2>
+<p>在仓库/setting/Pages里检查Github Page的网址，打开来就可以了。<br>
+<img src="https://zzzz-1111.github.io/post-images/1763987521815.png" alt="" loading="lazy"></p>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+        </div>
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://zzzz-1111.github.io/images/avatar.png?v=1764650264945" class="no-responsive avatar">
+    <div class="text-muted">有志者，事竟成</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      The Latest Blog
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://zzzz-1111.github.io/post/ti-jie-p4137rmq-problem-mex/">题解 P4137【Rmq Problem / mex】</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zzzz-1111.github.io/post/a/">Jupyter Lab和Pytorch的安装和使用</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zzzz-1111.github.io/post/diffision-xue-xi/">diffusion学习</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zzzz-1111.github.io/post/ba-da-mo-xing-jie-ru-dai-ma/">把大模型接入代码</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zzzz-1111.github.io/post/shen-du-xue-xi-xue-xi-bi-ji-logistic-hui-gui-sun-shi-han-shu-yu-ti-du-xia-jiang-fa/">深度学习学习笔记：Logistic回归、损失函数与梯度下降法</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zzzz-1111.github.io/post/ru-he-jiang-win11-you-jian-cai-dan-gai-hui-win10-chuan-tong-ban-ben/">如何将win11右键菜单改回win10传统版本</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zzzz-1111.github.io/post/s/">blog第一天——如何使用Gridea搭建博客</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://zzzz-1111.github.io/post/hello-gridea/">Hello Gridea</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      Label List
+    </div>
+    <div class="row">
+      
+        <a href="https://zzzz-1111.github.io/tag/t5Or_IrbPC/" class="badge success">
+          题解
+        </a>
+      
+        <a href="https://zzzz-1111.github.io/tag/uJ89BdBJly/" class="badge ">
+          AI
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Edited by Jinjia Zhao | <a class="rss" href="https://zzzz-1111.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>
